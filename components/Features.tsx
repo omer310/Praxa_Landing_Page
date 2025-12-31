@@ -2,7 +2,7 @@ import React from 'react';
 
 const Features: React.FC = () => {
   return (
-    <section className="py-24 px-6 bg-black relative" id="features">
+    <section className="py-24 px-6 relative" id="features">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
