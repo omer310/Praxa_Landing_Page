@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -11,12 +12,12 @@ const Footer: React.FC = () => {
           <span className="text-gray-400 font-semibold text-lg tracking-tight">Praxa</span>
         </div>
         <div className="flex gap-8 text-sm text-gray-500 font-medium">
-          <a className="hover:text-white transition-colors" href="#">Privacy</a>
-          <a className="hover:text-white transition-colors" href="#">Terms</a>
+          <Link className="hover:text-white transition-colors" to="/privacy">Privacy</Link>
+          <Link className="hover:text-white transition-colors" to="/terms">Terms</Link>
           <a className="hover:text-white transition-colors" href="#">Twitter</a>
-          <a className="hover:text-white transition-colors" href="#">Support</a>
+          <a className="hover:text-white transition-colors" href="mailto:support@praxa.app">Support</a>
         </div>
-        <p className="text-xs text-gray-600 font-medium">© 2025 Praxa Inc.</p>
+        <p className="text-xs text-gray-600 font-medium">© 2026 Praxa Inc.</p>
       </div>
     </footer>
   );
