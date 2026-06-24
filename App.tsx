@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Stats from './components/Stats';
 import Philosophy from './components/Philosophy';
 import Features from './components/Features';
 import CTA from './components/CTA';
@@ -23,7 +22,6 @@ const Home: React.FC = () => (
 
     <main className="flex-1 relative z-10 pt-24">
       <Hero />
-      <Stats />
       <Philosophy />
       <Features />
       <CTA />

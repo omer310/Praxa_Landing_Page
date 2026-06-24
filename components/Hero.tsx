@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
               </button>
             </form>
             <p className="text-xs text-gray-700 mt-4 text-center lg:text-left">
-              2,000+ people on the waitlist · No spam, ever.
+              No spam, ever. Unsubscribe anytime.
             </p>
           </div>
         </div>

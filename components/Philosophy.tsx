@@ -17,19 +17,19 @@ const Philosophy: React.FC = () => {
             <p className="text-lg text-text-secondary leading-relaxed">
               Most apps are just lists where tasks go to die. Praxa is an active operating layer that sits between your intent and your execution. It proactively engages you to ensure momentum is maintained.
             </p>
-            <div className="bg-[#0d0d0d] border border-white/8 rounded-3xl p-8 hover:border-white/15 transition-colors">
+            <div className="bg-[#0d0d0d] border border-[#1f1f1f] rounded-3xl p-8 hover:border-[#2a2a2a] transition-colors">
               <p className="text-[10px] font-bold tracking-widest uppercase text-blue-400/60 mb-4">01</p>
               <h4 className="text-xl font-bold text-white mb-2">Intent Translation</h4>
               <p className="text-gray-500 text-sm leading-relaxed">Speak roughly into the app, and our models convert chaotic thoughts into structured, executable specs.</p>
             </div>
-            <div className="bg-[#0d0d0d] border border-white/8 rounded-3xl p-8 hover:border-white/15 transition-colors">
+            <div className="bg-[#0d0d0d] border border-[#1f1f1f] rounded-3xl p-8 hover:border-[#2a2a2a] transition-colors">
               <p className="text-[10px] font-bold tracking-widest uppercase text-indigo-400/60 mb-4">02</p>
               <h4 className="text-xl font-bold text-white mb-2">Momentum Guardrails</h4>
               <p className="text-gray-500 text-sm leading-relaxed">The system detects when you're slipping and intervenes with smaller steps to get you back on track.</p>
             </div>
           </div>
           <div className="relative">
-            <div className="bg-[#0d0d0d] border border-white/8 h-full rounded-3xl p-10 relative overflow-hidden group hover:border-white/15 transition-colors">
+            <div className="bg-[#0d0d0d] border border-[#1f1f1f] h-full rounded-3xl p-10 relative overflow-hidden group hover:border-[#2a2a2a] transition-colors">
               <div className="absolute -right-20 -bottom-20 opacity-5 rotate-12 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-110">
                 <span className="material-symbols-outlined text-[240px]">support_agent</span>
               </div>

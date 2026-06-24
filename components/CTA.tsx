@@ -4,7 +4,7 @@ const CTA: React.FC = () => {
   return (
     <section className="py-24 px-6 relative overflow-hidden">
       <div className="max-w-4xl mx-auto">
-        <div className="border border-white/8 rounded-3xl bg-[#0d0d0d] p-12 md:p-20 relative overflow-hidden">
+        <div className="border border-[#1f1f1f] rounded-3xl bg-[#0d0d0d] p-12 md:p-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 pointer-events-none"></div>
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 
