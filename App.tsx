@@ -13,9 +13,11 @@ import Terms from './components/Terms';
 const Home: React.FC = () => (
   <div className="relative flex h-auto min-h-screen w-full flex-col">
     <div className="fixed inset-0 z-0 pointer-events-none">
-      <div className="absolute top-[-10%] left-[-10%] w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px] mix-blend-screen opacity-30 animate-pulse-glow"></div>
-      <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-accent/20 rounded-full blur-[100px] mix-blend-screen opacity-20"></div>
+      <div className="absolute top-[-5%] left-[-5%] w-[700px] h-[700px] bg-primary/10 rounded-full blur-[140px] opacity-60"></div>
+      <div className="absolute bottom-[-5%] right-[-5%] w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] opacity-40"></div>
+      <div className="absolute top-[40%] right-[20%] w-[300px] h-[300px] bg-primary/5 rounded-full blur-[80px] opacity-50"></div>
     </div>
+    <div className="grain" aria-hidden="true" />
 
     <Header />
 

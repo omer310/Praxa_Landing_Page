@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
           <Link className="hover:text-white transition-colors" to="/privacy">Privacy</Link>
           <Link className="hover:text-white transition-colors" to="/terms">Terms</Link>
           <a className="hover:text-white transition-colors" href="#">Twitter</a>
-          <a className="hover:text-white transition-colors" href="mailto:support@praxa.app">Support</a>
+          <a className="hover:text-white transition-colors" href="mailto:dev@floreolabs.org">Support</a>
         </div>
         <p className="text-xs text-gray-600 font-medium">© 2026 Praxa Inc.</p>
       </div>

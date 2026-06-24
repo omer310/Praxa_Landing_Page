@@ -1,33 +1,23 @@
 import React from 'react';
 
+const stats = [
+  { value: '94%', label: 'Weekly Retention', sub: 'across active users' },
+  { value: '1.2k', label: 'Daily Voice Intents', sub: 'captured & processed' },
+  { value: '15k+', label: 'Actions Executed', sub: 'since private beta' },
+];
+
 const Stats: React.FC = () => {
   return (
-    <section className="py-20">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white/5 border border-white/5 rounded-3xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/10 transition-colors duration-500 cursor-default">
-            <div className="mb-4 size-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500">
-                <span className="material-symbols-outlined">trending_up</span>
+    <section className="py-12 px-6 border-y border-white/5">
+      <div className="max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/5">
+          {stats.map((stat, i) => (
+            <div key={i} className="flex flex-col items-center md:items-start px-8 py-6 md:py-4 first:pl-0 last:pr-0">
+              <p className="text-4xl font-bold text-white tracking-tight tabular-nums">{stat.value}</p>
+              <p className="text-sm font-semibold text-white/70 mt-1">{stat.label}</p>
+              <p className="text-xs text-gray-600 mt-0.5">{stat.sub}</p>
             </div>
-            <p className="text-3xl font-bold text-white tracking-tight mb-1">94%</p>
-            <p className="text-xs text-gray-500 font-medium uppercase tracking-widest">Retention Rate</p>
-          </div>
-          
-          <div className="bg-white/5 border border-white/5 rounded-3xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/10 transition-colors duration-500 cursor-default">
-             <div className="mb-4 size-10 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-500">
-                <span className="material-symbols-outlined">record_voice_over</span>
-            </div>
-            <p className="text-3xl font-bold text-white tracking-tight mb-1">1.2k</p>
-            <p className="text-xs text-gray-500 font-medium uppercase tracking-widest">Daily Voice Intents</p>
-          </div>
-          
-          <div className="bg-white/5 border border-white/5 rounded-3xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/10 transition-colors duration-500 cursor-default">
-             <div className="mb-4 size-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-500">
-                <span className="material-symbols-outlined">bolt</span>
-            </div>
-            <p className="text-3xl font-bold text-white tracking-tight mb-1">15k+</p>
-            <p className="text-xs text-gray-500 font-medium uppercase tracking-widest">Actions Executed</p>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -53,8 +53,8 @@ const Terms: React.FC = () => {
                 To opt out, reply <strong className="text-white">STOP</strong> to any message or disable SMS
                 notifications in your profile settings. To get help, reply{' '}
                 <strong className="text-white">HELP</strong>. For support, contact{' '}
-                <a href="mailto:support@praxa.app" className="text-white underline hover:opacity-80">
-                  support@praxa.app
+                <a href="mailto:dev@floreolabs.org" className="text-white underline hover:opacity-80">
+                  dev@floreolabs.org
                 </a>.
               </p>
             </section>
@@ -108,8 +108,8 @@ const Terms: React.FC = () => {
               <h2 className="text-xl font-semibold text-white mb-3">9. Contact</h2>
               <p>
                 For questions about these Terms, contact us at{' '}
-                <a href="mailto:support@praxa.app" className="text-white underline hover:opacity-80">
-                  support@praxa.app
+                <a href="mailto:dev@floreolabs.org" className="text-white underline hover:opacity-80">
+                  dev@floreolabs.org
                 </a>.
               </p>
             </section>

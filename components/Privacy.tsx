@@ -48,9 +48,11 @@ const Privacy: React.FC = () => {
                 assistance.
               </p>
               <p className="mt-3">
-                <strong className="text-white">We do not share your mobile phone number with third parties</strong>{' '}
-                for their marketing purposes. Your phone number is used solely to deliver Praxa notifications and
-                responses to you.
+                <strong className="text-white">
+                  No mobile information will be shared with third parties or affiliates for marketing or promotional
+                  purposes. All other categories exclude text messaging originator opt-in data and consent; this
+                  information will not be shared with any third parties.
+                </strong>
               </p>
             </section>
 
@@ -71,6 +73,11 @@ const Privacy: React.FC = () => {
                 We do not sell your personal information. We share data only with service providers that help us
                 operate Praxa (such as cloud infrastructure and AI model providers), under strict confidentiality
                 agreements. We may disclose information if required by law.
+              </p>
+              <p className="mt-3">
+                Mobile opt-in data, SMS consent, and phone numbers collected through Praxa are never sold, rented,
+                shared, or transferred to third parties, affiliates, or lead generators for marketing or promotional
+                purposes.
               </p>
             </section>
 
@@ -95,8 +102,8 @@ const Privacy: React.FC = () => {
               <h2 className="text-xl font-semibold text-white mb-3">7. Contact Us</h2>
               <p>
                 If you have questions about this Privacy Policy, please contact us at{' '}
-                <a href="mailto:support@praxa.app" className="text-white underline hover:opacity-80">
-                  support@praxa.app
+                <a href="mailto:dev@floreolabs.org" className="text-white underline hover:opacity-80">
+                  dev@floreolabs.org
                 </a>.
               </p>
             </section>

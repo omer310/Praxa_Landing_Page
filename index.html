@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Praxa: The Mobile COO for Builders</title>
-    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
@@ -23,8 +23,9 @@
                         "text-secondary": "#86868b"
                     },
                     fontFamily: {
-                        "display": ["SF Pro Display", "-apple-system", "BlinkMacSystemFont", "Inter", "sans-serif"],
-                        "sans": ["SF Pro Display", "-apple-system", "BlinkMacSystemFont", "Inter", "sans-serif"],
+                        "display": ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+                        "sans": ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+                        "serif": ["Instrument Serif", "Georgia", "serif"],
                     },
                     backgroundImage: {
                         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -62,6 +63,15 @@
         }
         body {
             @apply bg-black text-white font-display antialiased selection:bg-primary/40 selection:text-white overflow-x-hidden;
+        }
+        .grain {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.035;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 300px 300px;
         }
     </style>
 </head>
