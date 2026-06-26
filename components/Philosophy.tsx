@@ -1,60 +1,73 @@
 import React from 'react';
 
+const steps = [
+  {
+    number: '01',
+    title: 'Voice Agent',
+    label: 'Talk to Praxa. It handles the rest.',
+    body: 'Open the panel and speak freely. The LiveKit-powered voice agent understands your context, updates your sprint in real time, and can act on your email and calendar — all without you switching apps.',
+  },
+  {
+    number: '02',
+    title: 'Smart Insights',
+    label: 'AI surfaces what actually matters.',
+    body: "Every day, Praxa scans your tasks, inbox, and calendar and surfaces the 17 types of actions that need a decision: reschedule this, deprioritize that, follow up here. Swipe yes or no — done.",
+  },
+  {
+    number: '03',
+    title: 'Check-In Calls',
+    label: 'Your agent calls your phone.',
+    body: "On a schedule you set, Praxa calls your actual phone number. It reviews what you completed, what stalled, and locks in a prioritized plan for the day. Post-call, a full session brief lands in the app.",
+  },
+];
+
 const Philosophy: React.FC = () => {
   return (
-    <section className="py-32 px-6 relative" id="philosophy">
-      <div className="absolute right-0 top-1/4 w-1/2 h-1/2 bg-gradient-radial from-blue-900/20 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-16">
-          <p className="text-primary/70 font-semibold tracking-widest uppercase text-[10px] mb-4">The Philosophy</p>
-          <h3 className="text-4xl md:text-5xl font-bold text-white leading-tight tracking-tight">
-            More than a task manager.<br />
-            <span className="font-serif italic font-normal text-gray-500">An Operating Layer.</span>
-          </h3>
+    <section className="px-8 md:px-12 pt-20 pb-8" id="how-it-works">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-14 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-rim pb-10">
+          <h2
+            className="font-display font-semibold text-cream leading-tight"
+            style={{ fontSize: 'clamp(2rem, 3.8vw, 3.2rem)' }}
+          >
+            How it works
+          </h2>
+          <p className="text-sm text-soft max-w-xs leading-relaxed">
+            Three interlocking layers that replace friction with forward motion.
+          </p>
         </div>
-        <div className="grid lg:grid-cols-2 gap-8">
-          <div className="space-y-6">
-            <p className="text-lg text-text-secondary leading-relaxed">
-              Most apps are just lists where tasks go to die. Praxa is an active operating layer that sits between your intent and your execution. It proactively engages you to ensure momentum is maintained.
-            </p>
-            <div className="bg-[#0d0d0d] border border-[#1f1f1f] rounded-3xl p-8 hover:border-[#2a2a2a] transition-colors">
-              <p className="text-[10px] font-bold tracking-widest uppercase text-blue-400/60 mb-4">01</p>
-              <h4 className="text-xl font-bold text-white mb-2">Intent Translation</h4>
-              <p className="text-gray-500 text-sm leading-relaxed">Speak roughly into the app, and our models convert chaotic thoughts into structured, executable specs.</p>
-            </div>
-            <div className="bg-[#0d0d0d] border border-[#1f1f1f] rounded-3xl p-8 hover:border-[#2a2a2a] transition-colors">
-              <p className="text-[10px] font-bold tracking-widest uppercase text-indigo-400/60 mb-4">02</p>
-              <h4 className="text-xl font-bold text-white mb-2">Momentum Guardrails</h4>
-              <p className="text-gray-500 text-sm leading-relaxed">The system detects when you're slipping and intervenes with smaller steps to get you back on track.</p>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="bg-[#0d0d0d] border border-[#1f1f1f] h-full rounded-3xl p-10 relative overflow-hidden group hover:border-[#2a2a2a] transition-colors">
-              <div className="absolute -right-20 -bottom-20 opacity-5 rotate-12 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-110">
-                <span className="material-symbols-outlined text-[240px]">support_agent</span>
+
+        <div>
+          {steps.map((step) => (
+            <div
+              key={step.number}
+              className="group grid grid-cols-[64px_1fr] md:grid-cols-[100px_1fr_1fr] gap-6 md:gap-0 py-10 md:py-12 border-b border-rim -mx-8 md:-mx-12 px-8 md:px-12 hover:bg-surface/25 transition-colors duration-300"
+            >
+              <div className="pt-1.5">
+                <span className="font-display text-[2.2rem] md:text-[3rem] font-semibold text-rim leading-none select-none group-hover:text-accent/25 transition-colors duration-300">
+                  {step.number}
+                </span>
               </div>
-              <div className="relative z-10 h-full flex flex-col justify-between">
-                <div>
-                  <div className="size-14 rounded-2xl bg-primary/20 flex items-center justify-center mb-8 text-primary shadow-[0_0_20px_rgba(10,132,255,0.2)]">
-                    <span className="material-symbols-outlined text-3xl">call</span>
-                  </div>
-                  <h4 className="text-3xl font-bold text-white mb-4">The AI COO Call</h4>
-                  <p className="text-text-secondary text-lg leading-relaxed mb-8">
-                    Every time you use your setup, your AI agent calls you to review yesterday's output and lock in today's plan. It's like a standup with a super-intelligent partner that knows your calendar, your goals, and your excuses.
-                  </p>
-                </div>
-                <div className="flex items-center gap-4 pt-8 border-t border-white/5">
-                  <div className="size-10 rounded-full bg-green-500 flex items-center justify-center animate-pulse">
-                    <span className="material-symbols-outlined text-white">call</span>
-                  </div>
-                  <div>
-                    <p className="text-white font-semibold text-sm">Incoming call...</p>
-                    <p className="text-primary text-xs">AI Operations Agent</p>
-                  </div>
-                </div>
+
+              <div className="md:pr-16 md:border-r md:border-rim">
+                <h3
+                  className="font-display font-semibold text-cream leading-tight mb-2"
+                  style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)' }}
+                >
+                  {step.title}
+                </h3>
+                <p className="text-[12px] font-medium text-accent/80 tracking-[0.12em] uppercase">
+                  {step.label}
+                </p>
+              </div>
+
+              <div className="col-span-2 md:col-span-1 md:pl-16 flex items-start">
+                <p className="text-[14px] text-soft leading-[1.75] max-w-lg">
+                  {step.body}
+                </p>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

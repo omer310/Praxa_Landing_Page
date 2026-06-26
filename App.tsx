@@ -10,23 +10,15 @@ import Privacy from './components/Privacy';
 import Terms from './components/Terms';
 
 const Home: React.FC = () => (
-  <div className="relative flex h-auto min-h-screen w-full flex-col">
-    <div className="fixed inset-0 z-0 pointer-events-none">
-      <div className="absolute top-[-5%] left-[-5%] w-[700px] h-[700px] bg-primary/10 rounded-full blur-[140px] opacity-60"></div>
-      <div className="absolute bottom-[-5%] right-[-5%] w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] opacity-40"></div>
-      <div className="absolute top-[40%] right-[20%] w-[300px] h-[300px] bg-primary/5 rounded-full blur-[80px] opacity-50"></div>
-    </div>
-    <div className="grain" aria-hidden="true" />
-
+  <div className="relative min-h-screen bg-bg">
+    <div className="fixed top-0 left-0 right-0 h-px bg-accent z-50 pointer-events-none" />
     <Header />
-
-    <main className="flex-1 relative z-10 pt-24">
+    <main>
       <Hero />
       <Philosophy />
       <Features />
       <CTA />
     </main>
-
     <Footer />
   </div>
 );

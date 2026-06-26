@@ -1,120 +1,168 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const sections = [
+  {
+    title: '1. Information We Collect',
+    content: (
+      <p>
+        Praxa collects information you provide directly, including your name, email address, phone number,
+        and any tasks, goals, or preferences you enter into the app. We also collect usage data to improve
+        our services.
+      </p>
+    ),
+  },
+  {
+    title: '2. SMS Communications',
+    content: (
+      <>
+        <p>
+          If you opt in to SMS notifications within the Praxa mobile app, we will send you text messages
+          including daily briefings, task reminders, scheduled call notifications, and conversational AI
+          responses. Message frequency varies based on your settings and usage.
+        </p>
+        <p className="mt-4">
+          <strong className="text-cream font-semibold">Message and data rates may apply.</strong> You can opt out at any
+          time by replying <strong className="text-cream font-semibold">STOP</strong> to any message, or by disabling SMS
+          notifications in your Praxa profile settings. Reply <strong className="text-cream font-semibold">HELP</strong> for
+          assistance.
+        </p>
+        <p className="mt-4">
+          <strong className="text-cream font-semibold">
+            No mobile information will be shared with third parties or affiliates for marketing or promotional
+            purposes. All other categories exclude text messaging originator opt-in data and consent; this
+            information will not be shared with any third parties.
+          </strong>
+        </p>
+      </>
+    ),
+  },
+  {
+    title: '3. How We Use Your Information',
+    content: (
+      <>
+        <p>We use your information to:</p>
+        <ul className="mt-3 space-y-1.5 pl-4">
+          {[
+            'Provide and improve the Praxa AI assistant service',
+            'Send SMS notifications and AI responses you have opted into',
+            'Personalize your experience based on your tasks and goals',
+            'Communicate with you about your account and service updates',
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-2.5">
+              <span className="mt-1.5 size-1 rounded-full bg-accent/60 shrink-0" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </>
+    ),
+  },
+  {
+    title: '4. Information Sharing',
+    content: (
+      <>
+        <p>
+          We do not sell your personal information. We share data only with service providers that help us
+          operate Praxa (such as cloud infrastructure and AI model providers), under strict confidentiality
+          agreements. We may disclose information if required by law.
+        </p>
+        <p className="mt-4">
+          Mobile opt-in data, SMS consent, and phone numbers collected through Praxa are never sold, rented,
+          shared, or transferred to third parties, affiliates, or lead generators for marketing or promotional
+          purposes.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: '5. Data Security',
+    content: (
+      <p>
+        We use industry-standard security measures to protect your data, including encryption in transit and
+        at rest. No method of transmission over the internet is 100% secure, and we cannot guarantee
+        absolute security.
+      </p>
+    ),
+  },
+  {
+    title: '6. Your Rights',
+    content: (
+      <p>
+        You may request access to, correction of, or deletion of your personal data at any time by
+        contacting us. You may also opt out of SMS communications at any time.
+      </p>
+    ),
+  },
+  {
+    title: '7. Contact Us',
+    content: (
+      <p>
+        If you have questions about this Privacy Policy, please contact us at{' '}
+        <a href="mailto:dev@floreolabs.org" className="text-accent underline underline-offset-2 hover:text-accent/80 transition-colors">
+          dev@floreolabs.org
+        </a>.
+      </p>
+    ),
+  },
+];
+
 const Privacy: React.FC = () => {
   return (
-    <div className="relative flex min-h-screen w-full flex-col bg-black text-white">
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px] mix-blend-screen opacity-30 animate-pulse-glow"></div>
-      </div>
+    <div className="min-h-screen bg-bg text-cream flex flex-col">
+      <div className="fixed top-0 left-0 right-0 h-px bg-accent z-50 pointer-events-none" />
 
-      <header className="relative z-10 px-6 py-6 border-b border-white/10">
-        <div className="max-w-4xl mx-auto flex items-center gap-3">
-          <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <div className="size-6 text-gray-400">
-              <span className="material-symbols-outlined">track_changes</span>
-            </div>
-            <span className="text-white font-semibold text-lg tracking-tight">Praxa</span>
+      <header className="px-8 md:px-12 py-5 border-b border-rim bg-bg/95 backdrop-blur-sm">
+        <div className="max-w-4xl mx-auto flex items-center justify-between">
+          <Link to="/" className="font-display text-[1.15rem] font-semibold tracking-[0.18em] uppercase text-cream hover:text-cream/80 transition-colors">
+            Praxa
+          </Link>
+          <Link
+            to="/"
+            className="text-[11px] font-medium tracking-[0.14em] uppercase text-soft hover:text-cream transition-colors duration-200"
+          >
+            Back to Home
           </Link>
         </div>
       </header>
 
-      <main className="relative z-10 flex-1 px-6 py-16">
+      <main className="flex-1 px-8 md:px-12 py-16 md:py-24">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-2 tracking-tight">Privacy Policy</h1>
-          <p className="text-gray-500 text-sm mb-12">Last updated: June 2026</p>
+          <div className="border-b border-rim pb-10 mb-14">
+            <p className="text-[11px] font-medium tracking-[0.28em] uppercase text-soft mb-5">Legal</p>
+            <h1
+              className="font-display font-semibold text-cream leading-tight"
+              style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}
+            >
+              Privacy Policy
+            </h1>
+            <p className="text-sm text-soft mt-3">Last updated: June 2026</p>
+          </div>
 
-          <div className="space-y-10 text-gray-300 leading-relaxed">
-            <section>
-              <h2 className="text-xl font-semibold text-white mb-3">1. Information We Collect</h2>
-              <p>
-                Praxa collects information you provide directly, including your name, email address, phone number,
-                and any tasks, goals, or preferences you enter into the app. We also collect usage data to improve
-                our services.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-semibold text-white mb-3">2. SMS Communications</h2>
-              <p>
-                If you opt in to SMS notifications within the Praxa mobile app, we will send you text messages
-                including daily briefings, task reminders, scheduled call notifications, and conversational AI
-                responses. Message frequency varies based on your settings and usage.
-              </p>
-              <p className="mt-3">
-                <strong className="text-white">Message and data rates may apply.</strong> You can opt out at any
-                time by replying <strong className="text-white">STOP</strong> to any message, or by disabling SMS
-                notifications in your Praxa profile settings. Reply <strong className="text-white">HELP</strong> for
-                assistance.
-              </p>
-              <p className="mt-3">
-                <strong className="text-white">
-                  No mobile information will be shared with third parties or affiliates for marketing or promotional
-                  purposes. All other categories exclude text messaging originator opt-in data and consent; this
-                  information will not be shared with any third parties.
-                </strong>
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-semibold text-white mb-3">3. How We Use Your Information</h2>
-              <p>We use your information to:</p>
-              <ul className="list-disc list-inside mt-2 space-y-1">
-                <li>Provide and improve the Praxa AI assistant service</li>
-                <li>Send SMS notifications and AI responses you have opted into</li>
-                <li>Personalize your experience based on your tasks and goals</li>
-                <li>Communicate with you about your account and service updates</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-semibold text-white mb-3">4. Information Sharing</h2>
-              <p>
-                We do not sell your personal information. We share data only with service providers that help us
-                operate Praxa (such as cloud infrastructure and AI model providers), under strict confidentiality
-                agreements. We may disclose information if required by law.
-              </p>
-              <p className="mt-3">
-                Mobile opt-in data, SMS consent, and phone numbers collected through Praxa are never sold, rented,
-                shared, or transferred to third parties, affiliates, or lead generators for marketing or promotional
-                purposes.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-semibold text-white mb-3">5. Data Security</h2>
-              <p>
-                We use industry-standard security measures to protect your data, including encryption in transit and
-                at rest. No method of transmission over the internet is 100% secure, and we cannot guarantee
-                absolute security.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-semibold text-white mb-3">6. Your Rights</h2>
-              <p>
-                You may request access to, correction of, or deletion of your personal data at any time by
-                contacting us. You may also opt out of SMS communications at any time.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-semibold text-white mb-3">7. Contact Us</h2>
-              <p>
-                If you have questions about this Privacy Policy, please contact us at{' '}
-                <a href="mailto:dev@floreolabs.org" className="text-white underline hover:opacity-80">
-                  dev@floreolabs.org
-                </a>.
-              </p>
-            </section>
+          <div className="space-y-0">
+            {sections.map((section) => (
+              <div key={section.title} className="py-10 border-b border-rim">
+                <h2 className="font-display font-semibold text-cream text-[1.35rem] mb-5 leading-tight">
+                  {section.title}
+                </h2>
+                <div className="text-[14px] text-soft leading-[1.8] space-y-0">
+                  {section.content}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </main>
 
-      <footer className="relative z-10 border-t border-white/10 py-8 px-6">
-        <div className="max-w-4xl mx-auto flex gap-6 text-sm text-gray-500">
-          <Link to="/" className="hover:text-white transition-colors">Home</Link>
-          <Link to="/terms" className="hover:text-white transition-colors">Terms</Link>
+      <footer className="border-t border-rim px-8 md:px-12 py-7">
+        <div className="max-w-4xl mx-auto flex items-center justify-between gap-5">
+          <span className="font-display text-[1rem] font-semibold tracking-[0.18em] uppercase text-cream">Praxa</span>
+          <div className="flex items-center gap-8 text-[11px] text-soft font-medium tracking-[0.12em] uppercase">
+            <Link className="hover:text-cream transition-colors duration-200" to="/">Home</Link>
+            <Link className="hover:text-cream transition-colors duration-200" to="/terms">Terms</Link>
+            <a className="hover:text-cream transition-colors duration-200" href="mailto:dev@floreolabs.org">Support</a>
+          </div>
+          <p className="text-[11px] text-soft/50 tracking-wide">&copy; 2026 Praxa Inc.</p>
         </div>
       </footer>
     </div>

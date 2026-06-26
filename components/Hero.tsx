@@ -1,90 +1,102 @@
 import React from 'react';
 import phoneImage from '../images/photo_2025-12-31_13-03-49.jpg?url';
 
+const marqueeItems = [
+  'Proactive AI Calls',
+  'Calendar Intelligence',
+  'Brain Dump',
+  'Email Triage',
+  'Weekly Momentum',
+  'Stack Integration',
+  'Intent Translation',
+  'Momentum Guardrails',
+];
+
 const Hero: React.FC = () => {
   return (
-    <section className="relative pt-40 pb-20 px-6 overflow-hidden min-h-screen flex flex-col justify-center">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-center">
-        <div className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left z-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/70 text-[10px] font-semibold uppercase tracking-widest mb-8 backdrop-blur-md">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
-            </span>
-            Waitlist Open
-          </div>
+    <>
+      <section className="pt-28 md:pt-36 pb-16 px-8 md:px-12 relative overflow-hidden">
+        <div
+          className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_auto] gap-12 xl:gap-24 items-end"
+          style={{ minHeight: 'calc(100vh - 10rem)' }}
+        >
+          <div className="flex flex-col justify-end pb-12 lg:pb-24">
+            <p className="text-[11px] font-medium tracking-[0.28em] uppercase text-soft mb-10">
+              AI Operating Layer &middot; Now Accepting Applications
+            </p>
 
-          <h1 className="text-5xl md:text-[5.5rem] font-bold tracking-tight leading-[1] mb-8 text-white">
-            Lightweight COO<br />
-            <span className="font-serif italic font-normal text-gray-500">in your pocket.</span>
-          </h1>
+            <h1
+              className="font-display font-semibold text-cream leading-[0.86] mb-10"
+              style={{ fontSize: 'clamp(3.8rem, 8.5vw, 9rem)' }}
+            >
+              Think loud.
+              <br />
+              <span className="italic font-normal text-soft/80">Execute fast.</span>
+            </h1>
 
-          <p className="text-base md:text-lg text-gray-500 max-w-md font-normal leading-relaxed mb-10">
-            Praxa sits between your intent and your execution — translating chaotic days into coordinated action, without the overhead.
-          </p>
+            <p className="text-[15px] text-soft max-w-[400px] leading-[1.75] mb-12 font-normal">
+              Praxa turns stream-of-consciousness into structured execution. The operating layer for founders and builders who move fast and hate dropping balls.
+            </p>
 
-          <div className="w-full max-w-sm relative">
             <form
-              className="flex w-full items-center bg-[#0d0d0d] rounded-2xl p-1.5 ring-1 ring-white/10 focus-within:ring-white/25 transition-all duration-300"
+              id="waitlist"
+              className="flex items-stretch gap-0 max-w-[460px] ring-1 ring-rim focus-within:ring-accent/40 transition-all duration-300"
               onSubmit={(e) => e.preventDefault()}
             >
-              <div className="pl-4 pr-3 text-gray-600">
-                <span className="material-symbols-outlined text-[18px]">mail</span>
-              </div>
               <input
-                className="w-full bg-transparent border-none text-white placeholder:text-gray-600 focus:ring-0 py-3 text-sm font-medium"
-                placeholder="Email address"
+                className="flex-1 bg-surface text-cream placeholder:text-soft/50 px-5 py-4 text-sm focus:outline-none min-w-0"
+                placeholder="your@email.com"
                 required
                 type="email"
               />
               <button
-                className="whitespace-nowrap rounded-xl bg-white hover:bg-gray-100 text-black px-5 py-2.5 text-sm font-semibold transition-all active:scale-95"
+                className="bg-accent text-black px-7 py-4 text-[11px] font-bold tracking-[0.14em] uppercase hover:bg-accent/85 transition-colors whitespace-nowrap shrink-0"
                 type="submit"
               >
                 Get Access
               </button>
             </form>
-            <p className="text-xs text-gray-700 mt-4 text-center lg:text-left">
-              No spam, ever. Unsubscribe anytime.
+
+            <p className="text-[11px] text-soft/40 mt-4">
+              iOS and Android &nbsp;&middot;&nbsp; Beta ships Q3 2026
             </p>
           </div>
-        </div>
 
-        <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
-          <div className="relative w-[320px] h-[640px] z-10 transition-transform hover:scale-[1.01] duration-700">
-            <div className="absolute inset-0 bg-black rounded-[3rem] border-[7px] border-[#1c1c1c] shadow-[0_0_0_3px_#2a2a2a,0_50px_120px_-20px_rgba(0,0,0,0.8)] overflow-hidden">
-              <div className="absolute inset-0 rounded-[2.6rem] ring-1 ring-white/10 pointer-events-none z-50"></div>
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-28 h-7 bg-black rounded-b-2xl z-40"></div>
+          <div className="hidden lg:flex flex-col justify-end pb-12 lg:pb-16 items-center relative">
+            <div className="relative w-[270px]">
               <div
-                className="h-full w-full rounded-[2.6rem] overflow-hidden relative bg-black"
+                className="w-full rounded-[2.8rem] overflow-hidden border border-rim shadow-[0_60px_100px_rgba(0,0,0,0.7)]"
                 style={{
-                  backgroundImage: `url(${phoneImage})`,
-                  backgroundSize: '314px 626px',
-                  backgroundPosition: '50% 15%',
-                  backgroundRepeat: 'no-repeat',
+                  aspectRatio: '9/19.5',
+                  background: `url(${phoneImage}) 50% 15% / cover no-repeat`,
                 }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-white/4 via-transparent to-transparent pointer-events-none z-30"></div>
+              />
+
+              <div className="absolute -bottom-6 -left-12 bg-surface border border-rim px-4 py-3 flex items-center gap-3 shadow-2xl">
+                <div className="size-8 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
+                  <div className="size-2.5 rounded-full bg-accent" />
+                </div>
+                <div>
+                  <p className="text-cream text-[11px] font-semibold tracking-wide">AI Ops Agent</p>
+                  <p className="text-soft text-[10px] mt-0.5">Incoming call &middot; 09:07 AM</p>
+                </div>
               </div>
             </div>
-            <div className="absolute top-[140px] -left-[4px] w-[4px] h-[28px] bg-[#252525] rounded-l-md"></div>
-            <div className="absolute top-[188px] -left-[4px] w-[4px] h-[52px] bg-[#252525] rounded-l-md"></div>
-            <div className="absolute top-[252px] -left-[4px] w-[4px] h-[52px] bg-[#252525] rounded-l-md"></div>
-            <div className="absolute top-[200px] -right-[4px] w-[4px] h-[80px] bg-[#252525] rounded-r-md"></div>
-          </div>
-
-          <div className="absolute -bottom-4 left-4 lg:left-0 bg-[#0f0f0f] border border-white/10 rounded-2xl p-4 flex items-center gap-3 shadow-2xl backdrop-blur-sm max-w-[220px]">
-            <div className="size-9 rounded-full bg-green-500/15 border border-green-500/20 flex items-center justify-center shrink-0">
-              <span className="material-symbols-outlined text-green-400 text-sm">call</span>
-            </div>
-            <div>
-              <p className="text-white text-xs font-semibold leading-tight">AI Ops Agent</p>
-              <p className="text-gray-600 text-[10px] leading-tight mt-0.5">Incoming · 09:07 AM</p>
-            </div>
           </div>
         </div>
+      </section>
+
+      <div className="border-y border-rim py-3.5 overflow-hidden bg-surface/40">
+        <div className="flex whitespace-nowrap animate-marquee">
+          {[...marqueeItems, ...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
+            <span key={i} className="inline-flex items-center gap-5 mx-5">
+              <span className="text-[11px] font-medium tracking-[0.22em] uppercase text-soft">{item}</span>
+              <span className="size-1 rounded-full bg-accent/60 shrink-0" />
+            </span>
+          ))}
+        </div>
       </div>
-    </section>
+    </>
   );
 };
 
