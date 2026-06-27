@@ -15,24 +15,24 @@ const marqueeItems = [
 const Hero: React.FC = () => {
   return (
     <>
-      <section className="pt-20 md:pt-24 pb-12 px-8 md:px-12 relative overflow-hidden min-h-screen flex items-center">
+      <section className="pt-20 md:pt-24 pb-12 px-5 sm:px-8 md:px-12 relative overflow-hidden min-h-screen flex items-center">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_auto] gap-12 xl:gap-24 items-center w-full">
 
           <div>
-            <p className="text-[11px] font-medium tracking-[0.28em] uppercase text-soft mb-8">
+            <p className="text-[10px] sm:text-[11px] font-medium tracking-[0.22em] sm:tracking-[0.28em] uppercase text-soft mb-6 sm:mb-8">
               AI Operating Layer &middot; Now Accepting Applications
             </p>
 
             <h1
-              className="font-display font-semibold text-cream leading-[0.86] mb-8"
-              style={{ fontSize: 'clamp(3.8rem, 8.5vw, 9rem)' }}
+              className="font-display font-semibold text-cream leading-[0.88] mb-6 sm:mb-8"
+              style={{ fontSize: 'clamp(2.8rem, 8.5vw, 9rem)' }}
             >
               Think loud.
               <br />
               <span className="italic font-normal text-soft/80">Execute fast.</span>
             </h1>
 
-            <p className="text-[15px] text-soft max-w-[400px] leading-[1.75] mb-10 font-normal">
+            <p className="text-[14px] sm:text-[15px] text-soft leading-[1.75] mb-8 sm:mb-10 font-normal">
               Praxa turns stream-of-consciousness into structured execution. The operating layer for founders and builders who move fast and hate dropping balls.
             </p>
 
@@ -42,13 +42,13 @@ const Hero: React.FC = () => {
               onSubmit={(e) => e.preventDefault()}
             >
               <input
-                className="flex-1 bg-surface text-cream placeholder:text-soft/50 px-5 py-4 text-sm focus:outline-none min-w-0"
+                className="flex-1 bg-surface text-cream placeholder:text-soft/50 px-4 sm:px-5 py-3.5 sm:py-4 text-sm focus:outline-none min-w-0"
                 placeholder="your@email.com"
                 required
                 type="email"
               />
               <button
-                className="bg-accent text-black px-7 py-4 text-[11px] font-bold tracking-[0.14em] uppercase hover:bg-accent/85 transition-colors whitespace-nowrap shrink-0"
+                className="bg-accent text-black px-5 sm:px-7 py-3.5 sm:py-4 text-[10px] sm:text-[11px] font-bold tracking-[0.12em] sm:tracking-[0.14em] uppercase hover:bg-accent/85 transition-colors whitespace-nowrap shrink-0"
                 type="submit"
               >
                 Get Access

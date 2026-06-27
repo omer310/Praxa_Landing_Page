@@ -152,7 +152,7 @@ const Terms: React.FC = () => {
     <div className="min-h-screen bg-bg text-cream flex flex-col">
       <div className="fixed top-0 left-0 right-0 h-px bg-accent z-50 pointer-events-none" />
 
-      <header className="px-8 md:px-12 py-5 border-b border-rim bg-bg/95 backdrop-blur-sm">
+      <header className="px-5 sm:px-8 md:px-12 py-5 border-b border-rim bg-bg/95 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <Link to="/" className="font-display text-[1.15rem] font-semibold tracking-[0.18em] uppercase text-cream hover:text-cream/80 transition-colors">
             Praxa
@@ -161,18 +161,18 @@ const Terms: React.FC = () => {
             to="/"
             className="text-[11px] font-medium tracking-[0.14em] uppercase text-soft hover:text-cream transition-colors duration-200"
           >
-            Back to Home
+            ← Home
           </Link>
         </div>
       </header>
 
-      <main className="flex-1 px-8 md:px-12 py-16 md:py-24">
+      <main className="flex-1 px-5 sm:px-8 md:px-12 py-12 sm:py-16 md:py-24">
         <div className="max-w-4xl mx-auto">
-          <div className="border-b border-rim pb-10 mb-14">
+          <div className="border-b border-rim pb-8 sm:pb-10 mb-10 sm:mb-14">
             <p className="text-[11px] font-medium tracking-[0.28em] uppercase text-soft mb-5">Legal</p>
             <h1
               className="font-display font-semibold text-cream leading-tight"
-              style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}
+              style={{ fontSize: 'clamp(2rem, 5vw, 4rem)' }}
             >
               Terms of Service
             </h1>
@@ -181,11 +181,11 @@ const Terms: React.FC = () => {
 
           <div className="space-y-0">
             {sections.map((section) => (
-              <div key={section.title} className="py-10 border-b border-rim">
-                <h2 className="font-display font-semibold text-cream text-[1.35rem] mb-5 leading-tight">
+              <div key={section.title} className="py-8 sm:py-10 border-b border-rim">
+                <h2 className="font-display font-semibold text-cream text-[1.2rem] sm:text-[1.35rem] mb-4 sm:mb-5 leading-tight">
                   {section.title}
                 </h2>
-                <div className="text-[14px] text-soft leading-[1.8]">
+                <div className="text-[13px] sm:text-[14px] text-soft leading-[1.8]">
                   {section.content}
                 </div>
               </div>
@@ -194,15 +194,15 @@ const Terms: React.FC = () => {
         </div>
       </main>
 
-      <footer className="border-t border-rim px-8 md:px-12 py-7">
-        <div className="max-w-4xl mx-auto flex items-center justify-between gap-5">
+      <footer className="border-t border-rim px-5 sm:px-8 md:px-12 py-6 sm:py-7">
+        <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-between gap-4">
           <span className="font-display text-[1rem] font-semibold tracking-[0.18em] uppercase text-cream">Praxa</span>
-          <div className="flex items-center gap-8 text-[11px] text-soft font-medium tracking-[0.12em] uppercase">
+          <div className="flex items-center gap-5 sm:gap-8 text-[11px] text-soft font-medium tracking-[0.12em] uppercase">
             <Link className="hover:text-cream transition-colors duration-200" to="/">Home</Link>
             <Link className="hover:text-cream transition-colors duration-200" to="/privacy">Privacy</Link>
             <a className="hover:text-cream transition-colors duration-200" href="mailto:dev@floreolabs.org">Support</a>
           </div>
-          <p className="text-[11px] text-soft/50 tracking-wide">&copy; 2026 Praxa Inc.</p>
+          <p className="text-[11px] text-soft/50 tracking-wide w-full sm:w-auto text-right sm:text-left">&copy; 2026 Praxa Inc.</p>
         </div>
       </footer>
     </div>

@@ -45,13 +45,13 @@ const features = [
 
 const Features: React.FC = () => {
   return (
-    <section className="px-8 md:px-12 pt-20 pb-8 border-t border-rim" id="features">
+    <section className="px-5 sm:px-8 md:px-12 pt-16 sm:pt-20 pb-8 border-t border-rim" id="features">
       <div className="max-w-7xl mx-auto">
 
-        <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-rim pb-10">
+        <div className="mb-10 sm:mb-12 flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-4 border-b border-rim pb-8 sm:pb-10">
           <h2
             className="font-display font-semibold text-cream leading-tight"
-            style={{ fontSize: 'clamp(2rem, 3.8vw, 3.2rem)' }}
+            style={{ fontSize: 'clamp(1.75rem, 3.8vw, 3.2rem)' }}
           >
             Everything you need
           </h2>
@@ -64,16 +64,29 @@ const Features: React.FC = () => {
           {features.map((feature) => (
             <div
               key={feature.name}
-              className="group py-8 border-b border-rim grid grid-cols-1 md:grid-cols-[1fr_2fr_auto] gap-4 md:gap-12 items-baseline -mx-8 md:-mx-12 px-8 md:px-12 hover:bg-surface/50 transition-colors duration-200"
+              className="group py-6 sm:py-8 border-b border-rim grid grid-cols-1 md:grid-cols-[1fr_2fr_auto] gap-2 sm:gap-3 md:gap-12 md:items-baseline -mx-5 sm:-mx-8 md:-mx-12 px-5 sm:px-8 md:px-12 hover:bg-surface/50 transition-colors duration-200"
             >
-              <h3
-                className="font-display font-semibold text-cream leading-tight"
-                style={{ fontSize: 'clamp(1.25rem, 2vw, 1.6rem)' }}
-              >
-                {feature.name}
-              </h3>
+              <div className="flex items-start justify-between md:block">
+                <h3
+                  className="font-display font-semibold text-cream leading-tight"
+                  style={{ fontSize: 'clamp(1.15rem, 2vw, 1.6rem)' }}
+                >
+                  {feature.name}
+                </h3>
+                <div className="md:hidden flex items-center">
+                  <span
+                    className={`text-[10px] font-bold tracking-[0.18em] uppercase px-2.5 py-1 border whitespace-nowrap ${
+                      feature.tag === 'Pro'
+                        ? 'border-accent/35 text-accent bg-accent/5'
+                        : 'border-rim text-soft'
+                    }`}
+                  >
+                    {feature.tag}
+                  </span>
+                </div>
+              </div>
               <p className="text-[13px] text-soft leading-[1.75]">{feature.desc}</p>
-              <div className="flex justify-start md:justify-end">
+              <div className="hidden md:flex justify-end">
                 <span
                   className={`text-[10px] font-bold tracking-[0.18em] uppercase px-3 py-1.5 border whitespace-nowrap ${
                     feature.tag === 'Pro'

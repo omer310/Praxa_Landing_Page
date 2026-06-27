@@ -23,12 +23,12 @@ const steps = [
 
 const Philosophy: React.FC = () => {
   return (
-    <section className="px-8 md:px-12 pt-20 pb-8" id="how-it-works">
+    <section className="px-5 sm:px-8 md:px-12 pt-16 sm:pt-20 pb-8" id="how-it-works">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-14 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-rim pb-10">
+        <div className="mb-10 sm:mb-14 flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-4 border-b border-rim pb-8 sm:pb-10">
           <h2
             className="font-display font-semibold text-cream leading-tight"
-            style={{ fontSize: 'clamp(2rem, 3.8vw, 3.2rem)' }}
+            style={{ fontSize: 'clamp(1.75rem, 3.8vw, 3.2rem)' }}
           >
             How it works
           </h2>
@@ -41,28 +41,28 @@ const Philosophy: React.FC = () => {
           {steps.map((step) => (
             <div
               key={step.number}
-              className="group grid grid-cols-[64px_1fr] md:grid-cols-[100px_1fr_1fr] gap-6 md:gap-0 py-10 md:py-12 border-b border-rim -mx-8 md:-mx-12 px-8 md:px-12 hover:bg-surface/25 transition-colors duration-300"
+              className="group grid grid-cols-[48px_1fr] sm:grid-cols-[64px_1fr] md:grid-cols-[100px_1fr_1fr] gap-4 sm:gap-6 md:gap-0 py-8 sm:py-10 md:py-12 border-b border-rim -mx-5 sm:-mx-8 md:-mx-12 px-5 sm:px-8 md:px-12 hover:bg-surface/25 transition-colors duration-300"
             >
-              <div className="pt-1.5">
-                <span className="font-display text-[2.2rem] md:text-[3rem] font-semibold text-rim leading-none select-none group-hover:text-accent/25 transition-colors duration-300">
+              <div className="pt-1">
+                <span className="font-display text-[1.8rem] sm:text-[2.2rem] md:text-[3rem] font-semibold text-rim leading-none select-none group-hover:text-accent/25 transition-colors duration-300">
                   {step.number}
                 </span>
               </div>
 
               <div className="md:pr-16 md:border-r md:border-rim">
                 <h3
-                  className="font-display font-semibold text-cream leading-tight mb-2"
-                  style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)' }}
+                  className="font-display font-semibold text-cream leading-tight mb-1.5"
+                  style={{ fontSize: 'clamp(1.25rem, 2.5vw, 2rem)' }}
                 >
                   {step.title}
                 </h3>
-                <p className="text-[12px] font-medium text-accent/80 tracking-[0.12em] uppercase">
+                <p className="text-[11px] sm:text-[12px] font-medium text-accent/80 tracking-[0.12em] uppercase">
                   {step.label}
                 </p>
               </div>
 
-              <div className="col-span-2 md:col-span-1 md:pl-16 flex items-start">
-                <p className="text-[14px] text-soft leading-[1.75] max-w-lg">
+              <div className="col-span-2 md:col-span-1 md:pl-16 flex items-start pt-1 md:pt-0">
+                <p className="text-[13px] sm:text-[14px] text-soft leading-[1.75] max-w-lg">
                   {step.body}
                 </p>
               </div>

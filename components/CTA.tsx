@@ -2,23 +2,23 @@ import React from 'react';
 
 const CTA: React.FC = () => {
   return (
-    <section className="px-8 md:px-12 pt-24 pb-28 border-t border-rim relative overflow-hidden">
+    <section className="px-5 sm:px-8 md:px-12 pt-20 sm:pt-24 pb-24 sm:pb-28 border-t border-rim relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative">
         <div className="max-w-3xl">
-          <p className="text-[11px] font-medium tracking-[0.28em] uppercase text-soft mb-10">
+          <p className="text-[10px] sm:text-[11px] font-medium tracking-[0.22em] sm:tracking-[0.28em] uppercase text-soft mb-8 sm:mb-10">
             Early Access
           </p>
 
           <h2
-            className="font-display font-semibold text-cream leading-[0.88] mb-10"
-            style={{ fontSize: 'clamp(3rem, 7.5vw, 8rem)' }}
+            className="font-display font-semibold text-cream leading-[0.88] mb-8 sm:mb-10"
+            style={{ fontSize: 'clamp(2.6rem, 7.5vw, 8rem)' }}
           >
             Your call
             <br />
             is incoming.
           </h2>
 
-          <p className="text-[15px] text-soft leading-[1.75] max-w-md mb-12">
+          <p className="text-[14px] sm:text-[15px] text-soft leading-[1.75] max-w-md mb-10 sm:mb-12">
             Join the waitlist for iOS and Android beta. Spots roll out weekly. The earlier you're in, the more it shapes what gets built.
           </p>
 
@@ -27,16 +27,17 @@ const CTA: React.FC = () => {
             onSubmit={(e) => e.preventDefault()}
           >
             <input
-              className="flex-1 bg-surface text-cream placeholder:text-soft/50 px-5 py-4 text-sm focus:outline-none min-w-0"
+              className="flex-1 bg-surface text-cream placeholder:text-soft/50 px-4 sm:px-5 py-3.5 sm:py-4 text-sm focus:outline-none min-w-0"
               placeholder="your@email.com"
               required
               type="email"
             />
             <button
-              className="bg-accent text-black px-8 py-4 text-[11px] font-bold tracking-[0.14em] uppercase hover:bg-accent/85 transition-colors whitespace-nowrap shrink-0"
+              className="bg-accent text-black px-5 sm:px-8 py-3.5 sm:py-4 text-[10px] sm:text-[11px] font-bold tracking-[0.12em] sm:tracking-[0.14em] uppercase hover:bg-accent/85 transition-colors whitespace-nowrap shrink-0"
               type="submit"
             >
-              Join Waitlist
+              <span className="sm:hidden">Join</span>
+              <span className="hidden sm:inline">Join Waitlist</span>
             </button>
           </form>
 

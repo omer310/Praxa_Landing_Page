@@ -4,7 +4,7 @@ const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-px left-0 right-0 z-40 flex items-center justify-between px-8 md:px-12 py-5 bg-bg/95 backdrop-blur-sm border-b border-rim">
+    <header className="fixed top-px left-0 right-0 z-40 flex items-center justify-between px-5 sm:px-8 md:px-12 py-5 bg-bg/95 backdrop-blur-sm border-b border-rim">
       <a href="/" className="font-display text-[1.15rem] font-semibold tracking-[0.18em] text-cream uppercase">
         Praxa
       </a>
@@ -24,10 +24,10 @@ const Header: React.FC = () => {
         </a>
       </nav>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-3 sm:gap-4">
         <a
           href="#waitlist"
-          className="bg-accent text-black text-[11px] font-bold tracking-[0.12em] uppercase px-6 py-2.5 hover:bg-accent/85 active:scale-95 transition-all duration-150"
+          className="bg-accent text-black text-[10px] sm:text-[11px] font-bold tracking-[0.12em] uppercase px-4 sm:px-6 py-2 sm:py-2.5 hover:bg-accent/85 active:scale-95 transition-all duration-150"
         >
           Join Waitlist
         </a>
@@ -53,7 +53,7 @@ const Header: React.FC = () => {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-bg border-b border-rim px-8 py-6 flex flex-col gap-5">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-bg border-b border-rim px-5 sm:px-8 py-6 flex flex-col gap-5">
           <a className="text-[12px] font-medium text-soft hover:text-cream tracking-[0.14em] uppercase transition-colors" href="#how-it-works" onClick={() => setMenuOpen(false)}>How It Works</a>
           <a className="text-[12px] font-medium text-soft hover:text-cream tracking-[0.14em] uppercase transition-colors" href="#features" onClick={() => setMenuOpen(false)}>Features</a>
         </div>
