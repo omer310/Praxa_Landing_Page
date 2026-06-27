@@ -25,15 +25,49 @@ const sections = [
     title: '3. SMS Messaging Terms',
     content: (
       <>
+        <p className="font-medium text-cream/90 mb-1">Opt-In Process</p>
         <p>
-          By enabling SMS notifications in the Praxa mobile app, you consent to receive text messages from
-          Praxa, including daily briefings, reminders, and AI responses. Message frequency varies.{' '}
+          SMS consent is obtained exclusively within the Praxa mobile app — not through this website or
+          the waitlist form. You provide your phone number and explicit consent during onboarding (the
+          "Voice Check-ins" step) or at any time via Profile &gt; Check-In Calls. The opt-in screen
+          displays a clear description of the message program before you confirm. You may skip this step
+          entirely; providing a phone number is optional and is not required to use any feature of the
+          Service.
+        </p>
+
+        <p className="font-medium text-cream/90 mt-5 mb-1">Messages You May Receive</p>
+        <p>
+          By enabling SMS in the app, you consent to receive text messages from Praxa, including:
+        </p>
+        <ul className="mt-3 space-y-1.5 pl-4">
+          {[
+            'Scheduled AI check-in call alerts and reminders',
+            'Daily brief notifications (tasks, email, calendar summary)',
+            'Task due-date reminders and overdue alerts',
+            'Session brief summaries after completed AI calls',
+            'Transactional service and account-related notifications',
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-2.5">
+              <span className="mt-1.5 size-1 rounded-full bg-accent/60 shrink-0" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-4">Message frequency varies. Free plan: up to 1 check-in call per month. Pro plan: up to multiple check-ins per week, plus task and brief notifications based on your settings.</p>
+
+        <p className="mt-5">
           <strong className="text-cream font-semibold">Message and data rates may apply.</strong>
         </p>
+
         <p className="mt-4">
-          To opt out, reply <strong className="text-cream font-semibold">STOP</strong> to any message or disable SMS
-          notifications in your profile settings. To get help, reply{' '}
-          <strong className="text-cream font-semibold">HELP</strong>. For support, contact{' '}
+          <strong className="text-cream font-semibold">Consent is not a condition of purchase.</strong>{' '}
+          You are not required to opt into SMS to purchase Praxa Pro or to access any feature of the Service.
+        </p>
+
+        <p className="mt-4">
+          To opt out, reply <strong className="text-cream font-semibold">STOP</strong> to any message or
+          disable SMS in Profile &gt; Check-In Calls. To get help, reply{' '}
+          <strong className="text-cream font-semibold">HELP</strong> or contact us at{' '}
           <a href="mailto:dev@floreolabs.org" className="text-accent underline underline-offset-2 hover:text-accent/80 transition-colors">
             dev@floreolabs.org
           </a>.

@@ -40,12 +40,16 @@ const CTA: React.FC = () => {
             </button>
           </form>
 
-          <p className="text-[11px] text-soft/40 mt-4">
+          <p className="text-[11px] text-soft/50 mt-4 max-w-[480px] leading-relaxed">
             By joining, you agree to our{' '}
+            <a href="/privacy" className="underline underline-offset-2 hover:text-soft/70 transition-colors">
+              Privacy Policy
+            </a>
+            {' '}and{' '}
             <a href="/terms" className="underline underline-offset-2 hover:text-soft/70 transition-colors">
               Terms of Service
             </a>
-            .
+            . SMS opt-in is collected separately within the app and is not a condition of joining. Msg &amp; data rates may apply.
           </p>
         </div>
 

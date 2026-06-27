@@ -8,6 +8,7 @@ import CTA from './components/CTA';
 import Footer from './components/Footer';
 import Privacy from './components/Privacy';
 import Terms from './components/Terms';
+import OptInFlow from './components/OptInFlow';
 
 const Home: React.FC = () => (
   <div className="relative min-h-screen bg-bg">
@@ -30,6 +31,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/sms-opt-in" element={<OptInFlow />} />
       </Routes>
     </BrowserRouter>
   );

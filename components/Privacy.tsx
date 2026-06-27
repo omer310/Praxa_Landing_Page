@@ -16,22 +16,62 @@ const sections = [
     title: '2. SMS Communications',
     content: (
       <>
+        <p className="font-medium text-cream/90 mb-1">How You Opt In</p>
         <p>
-          If you opt in to SMS notifications within the Praxa mobile app, we will send you text messages
-          including daily briefings, task reminders, scheduled call notifications, and conversational AI
-          responses. Message frequency varies based on your settings and usage.
+          SMS consent is collected inside the Praxa mobile app — never on this website. You provide your
+          phone number and explicit consent during onboarding (the "Voice Check-ins" step) or at any time
+          via Profile &gt; Check-In Calls. At the point of opt-in, the app displays disclosure language
+          confirming the nature and frequency of messages before you submit your number. Providing a phone
+          number is entirely optional and is not required to create an account or use any core feature of
+          Praxa.
         </p>
-        <p className="mt-4">
-          <strong className="text-cream font-semibold">Message and data rates may apply.</strong> You can opt out at any
-          time by replying <strong className="text-cream font-semibold">STOP</strong> to any message, or by disabling SMS
-          notifications in your Praxa profile settings. Reply <strong className="text-cream font-semibold">HELP</strong> for
-          assistance.
+
+        <p className="font-medium text-cream/90 mt-5 mb-1">Types of Messages</p>
+        <p>Once opted in, Praxa may send you the following categories of SMS messages:</p>
+        <ul className="mt-3 space-y-1.5 pl-4">
+          {[
+            'Scheduled AI check-in call alerts and reminders',
+            'Daily brief notifications summarizing your tasks, email, and calendar',
+            'Task due-date reminders and overdue alerts',
+            'Session brief summaries delivered after completed AI calls',
+            'Transactional service and account-related notifications',
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-2.5">
+              <span className="mt-1.5 size-1 rounded-full bg-accent/60 shrink-0" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <p className="font-medium text-cream/90 mt-5 mb-1">Message Frequency</p>
+        <p>
+          Message frequency varies based on your plan and settings. Check-in call frequency ranges from
+          once per month (Free plan) to multiple times per week (Pro plan). Task reminders and daily brief
+          notifications depend on your individual settings and sprint activity.
         </p>
-        <p className="mt-4">
+
+        <p className="mt-5">
+          <strong className="text-cream font-semibold">Consent is not a condition of purchase.</strong>{' '}
+          You are not required to opt into SMS communications as a condition of purchasing Praxa Pro or
+          accessing any feature of the Service.
+        </p>
+
+        <p className="mt-5">
+          <strong className="text-cream font-semibold">Message and data rates may apply.</strong> You can
+          opt out at any time by replying{' '}
+          <strong className="text-cream font-semibold">STOP</strong> to any message, or by disabling SMS
+          notifications in your Praxa profile settings. Reply{' '}
+          <strong className="text-cream font-semibold">HELP</strong> for assistance or contact us at{' '}
+          <a href="mailto:dev@floreolabs.org" className="text-accent underline underline-offset-2 hover:text-accent/80 transition-colors">
+            dev@floreolabs.org
+          </a>.
+        </p>
+
+        <p className="mt-5">
           <strong className="text-cream font-semibold">
-            No mobile information will be shared with third parties or affiliates for marketing or promotional
-            purposes. All other categories exclude text messaging originator opt-in data and consent; this
-            information will not be shared with any third parties.
+            No mobile information will be shared with third parties or affiliates for marketing or
+            promotional purposes. All other categories exclude text messaging originator opt-in data and
+            consent; this information will not be shared with any third parties.
           </strong>
         </p>
       </>
